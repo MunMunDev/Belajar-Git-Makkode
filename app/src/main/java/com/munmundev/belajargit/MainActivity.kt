@@ -11,14 +11,10 @@ class MainActivity : AppCompatActivity() {
         println("Commit Pertama")
 
         taskSecondBranch()
-        taskThirdBranch()
     }
 
     private fun taskSecondBranch(){
         println("second branch")
     }
 
-    private fun taskThirdBranch(){
-        println("Third Branch")
-    }
 }
