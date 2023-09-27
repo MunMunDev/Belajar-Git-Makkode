@@ -11,10 +11,15 @@ class MainActivity : AppCompatActivity() {
         println("Commit Pertama")
 
         taskSecondBranch()
+        updateTaskThirdBranch()
     }
 
     private fun taskSecondBranch(){
         println("second branch")
+    }
+
+    private fun updateTaskThirdBranch(){
+        println("Update TaskThirdBranch")
     }
 
 }
