@@ -22,4 +22,8 @@ class MainActivity : AppCompatActivity() {
         println("Update TaskThirdBranch")
     }
 
+    private fun taskBelajarGit(){
+        println("STUDY GITHUB")
+    }
+
 }
