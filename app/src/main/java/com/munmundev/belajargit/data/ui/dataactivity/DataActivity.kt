@@ -76,7 +76,6 @@ class DataActivity : AppCompatActivity() {
                 override fun onFailure(call: Call<ArrayList<ApiModel>>, t: Throwable) {
                     Log.d(TAG, "onFailure: gagal: ${t.message}")
                 }
-
             })
     }
 }
