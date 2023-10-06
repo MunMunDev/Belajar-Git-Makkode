@@ -2,7 +2,7 @@ package com.munmundev.belajargit.data.model
 
 import com.google.gson.annotations.SerializedName
 
-class ApiModel (
+data class ApiModel (
     @SerializedName("id_user")
     val id_user: String,
 
@@ -17,4 +17,5 @@ class ApiModel (
 
     @SerializedName("pass_id")
     val pass_id: String
+
 )

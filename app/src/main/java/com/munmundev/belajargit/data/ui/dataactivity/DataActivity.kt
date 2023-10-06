@@ -23,22 +23,11 @@ class DataActivity : AppCompatActivity() {
         binding = ActivityDataBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-//        data()
+        setupViewModel()
+    }
 
+    fun setupViewModel(){
         viewModel = ViewModelProvider(this@DataActivity).get(DataViewModel::class.java)
-
-//        viewModel.getData().observe(this@DataActivity, Observer {
-//            Log.d("DataActivityTAG", "jumlah Data: ${it.size}")
-//            var data = ""
-//            for (value in it){
-//                data+="-"
-//                data+="nama -${value.nama} - "
-//                data+="alamat${value.alamat} - "
-//                data+="nomor -${value.nomor} - "
-//                data+="\n"
-//            }
-//            binding.txtNumber.text = data
-//        })
 
         viewModel.getData().observe(this@DataActivity, Observer {
             var data = ""
@@ -55,27 +44,4 @@ class DataActivity : AppCompatActivity() {
         }
     }
 
-    fun data(){
-        array = arrayListOf()
-
-        ApiConfig.getRetrofit().getData()
-            .enqueue(object : Callback<ArrayList<ApiModel>>{
-                override fun onResponse(
-                    call: Call<ArrayList<ApiModel>>,
-                    response: Response<ArrayList<ApiModel>>
-                ) {
-                    if(response.body()!!.isNotEmpty()){
-                        array = response.body()!!
-                        Log.d(TAG, "onResponse: size: ${array.size} \ndata: ${array[0].nama}")
-                    }
-                    else{
-                        Log.d(TAG, "onResponse: Tidak Ada Isinya")
-                    }
-                }
-
-                override fun onFailure(call: Call<ArrayList<ApiModel>>, t: Throwable) {
-                    Log.d(TAG, "onFailure: gagal: ${t.message}")
-                }
-            })
-    }
 }

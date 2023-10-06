@@ -39,10 +39,6 @@ class DataViewModel: ViewModel() {
                 }
 
             })
-
-
-//        arrayData.add(ApiModel("1", "Nama", "Alamat", "089"))
-//        _arrayData.value = arrayData
     }
 
     fun getData(): LiveData<ArrayList<ApiModel>>{
