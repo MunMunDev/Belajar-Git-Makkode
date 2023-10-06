@@ -4,39 +4,123 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".data.ui.mainactivity.MainActivity">
 
-    <TextView
-        android:id="@+id/tv_boolean"
+    <Button
+        android:id="@+id/btnPindah"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="40dp"
-        android:text="False"
-        android:textSize="18sp"/>
+        android:layout_marginTop="20dp"
+        android:text="Pindah Activity"/>
 
     <TextView
-        android:id="@+id/tv_number"
-        android:layout_width="wrap_content"
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/tv_boolean"
+        app:layout_constraintTop_toBottomOf="@id/btnPindah"
+        android:layout_marginTop="30dp"
+        android:text="Kalkulator"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:gravity="center"/>
+
+    <EditText
+        android:id="@+id/etNilai1"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="18dp"
-        android:text="20"
-        android:textSize="16sp"
-        android:textStyle="bold"/>
+        android:layout_marginTop="16dp"
+        android:hint="Masukkan Nilai 1"
+        android:inputType="number"
+        android:maxLength="5"/>
+
+    <EditText
+        android:id="@+id/etNilai2"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/etNilai1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:hint="Masukkan Nilai 2"
+        android:inputType="number"
+        android:maxLength="5"/>
 
     <Button
-        android:id="@+id/btn_tambah"
-        android:layout_width="wrap_content"
+        android:id="@+id/btnHasil"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/tv_number"
+        app:layout_constraintTop_toBottomOf="@id/etNilai2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20dp"
-        android:text="Tambah"/>
+        android:layout_marginTop="8dp"
+        android:text="Jumlahkan"/>
+
+    <TextView
+        android:id="@+id/tvHasilNilai1"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btnHasil"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="20dp"
+        android:text="Nilai 1"/>
+
+    <TextView
+        android:id="@+id/tvHasilNilai2"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btnHasil"
+        app:layout_constraintStart_toEndOf="@id/tvHasilNilai1"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="10dp"
+        android:text="Nilai 2"/>
+
+    <TextView
+        android:id="@+id/tvHasilHasil"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btnHasil"
+        app:layout_constraintStart_toEndOf="@id/tvHasilNilai2"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="10dp"
+        android:text="Nilai 3"/>
+
+
+    <TextView
+        android:id="@+id/tvVmNilai1"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvHasilNilai1"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="22dp"
+        android:layout_marginStart="20dp"
+        android:text="Nilai 1"/>
+
+    <TextView
+        android:id="@+id/tvVmNilai2"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvHasilNilai1"
+        app:layout_constraintStart_toEndOf="@id/tvVmNilai1"
+        android:layout_marginTop="22dp"
+        android:layout_marginStart="10dp"
+        android:text="Nilai 2"/>
+
+    <TextView
+        android:id="@+id/tvVmHasil"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvHasilNilai1"
+        app:layout_constraintStart_toEndOf="@id/tvVmNilai2"
+        android:layout_marginTop="22dp"
+        android:layout_marginStart="10dp"
+        android:text="Nilai 3"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
